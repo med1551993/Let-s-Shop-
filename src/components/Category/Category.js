@@ -10,8 +10,8 @@ const Category = ({ data, status }) => {
   if (status === STATUS.LOADING) return <Loader />;
 
   return (
-    <section className="categories py-1 bg-ghost-white" id="categories">
-      <div className="container">
+    <section className="categories bg-ghost-white" id="categories">
+      <div className="">
         <div className="categories-content">
           {/* <div className="section-title">
             <h3 className="text-uppercase fw-7 text-regal-blue ls-1">
@@ -25,7 +25,7 @@ const Category = ({ data, status }) => {
                   <div className="category-item-img1">
                     <img src={category.image} alt={category.name} />
                   </div>
-                  <div className="category-item-name1 text-center">
+                  <div className="category-item-name1 text-center text-white">
                     <h6 className="fs-20">{category.name}</h6>
                   </div>
                 </div>

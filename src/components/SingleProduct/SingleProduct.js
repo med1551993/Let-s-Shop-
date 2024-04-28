@@ -9,6 +9,7 @@ import { getCartTotal } from "../../store/cartSlice";
 import { SnackbarProvider, enqueueSnackbar } from "notistack";
 
 const SingleProduct = () => {
+  const [imgIndex, setImgIndex] = useState(0);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [qty, setQty] = useState(1);
@@ -58,7 +59,24 @@ const SingleProduct = () => {
           {/*left details*/}
           <div className="left-details">
             <div className="detail-img">
-              <img src={product.images[0]} alt={product.title} />
+              <img src={product.images[imgIndex]} alt={product.title} />
+            </div>
+            <div className="detail-imgs flex">
+              <img
+                src={product.images[0]}
+                alt={product.title}
+                onClick={() => setImgIndex(0)}
+              />
+              <img
+                src={product.images[1]}
+                alt={product.title}
+                onClick={() => setImgIndex(1)}
+              />
+              <img
+                src={product.images[2]}
+                alt={product.title}
+                onClick={() => setImgIndex(2)}
+              />
             </div>
           </div>
 

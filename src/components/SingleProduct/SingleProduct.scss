@@ -41,6 +41,20 @@
     overflow-y: scroll;
     row-gap: 32px;
     height: 70vh;
+    .detail-img{
+      img{
+        cursor: pointer;
+        padding: 3px;
+     
+      } 
+    }
+    .detail-imgs{
+      img{
+        cursor: pointer;
+        padding: 3px;
+        width: 80px;
+      } 
+    }
     .details-info {
       .detail-img {
         margin: 6px 0 12px 0;
