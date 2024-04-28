@@ -1,0 +1,13 @@
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.product-item > *:nth-child(2) {
+  flex: 1;
+}
+.product-item-body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
