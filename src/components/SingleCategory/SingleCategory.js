@@ -38,7 +38,7 @@ const SingleCategory = ({ products, status }) => {
                 onClick={() => viewModalHandler(product)}
               >
                       <div className="product-item-img">
-                        <img src={product.images[0]} alt="" />
+                        <img src={product.images[2]} alt="" />
                         <div className="product-item-cat text-white fs-13 text-uppercase bg-gold fw-6">
                           {product.category.name}
                         </div>

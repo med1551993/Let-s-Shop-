@@ -33,8 +33,9 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
-      <Sliderimg />
-      <Category data={categories} status={categoryStatus} />
+     <Sliderimg />
+      <Category data={categories} status={categoryStatus} /> 
+      
       <ProductList products={products} status={productStatus} />
 
       {/* category one products */}

@@ -10,25 +10,33 @@ const Category = ({ data, status }) => {
   if (status === STATUS.LOADING) return <Loader />;
 
   return (
-    <section className="categories py-5 bg-ghost-white" id="categories">
+    <section className="categories py-1 bg-ghost-white" id="categories">
       <div className="container">
         <div className="categories-content">
-          <div className="section-title">
+          {/* <div className="section-title">
             <h3 className="text-uppercase fw-7 text-regal-blue ls-1">
               Category
             </h3>
-          </div>
+          </div> */}
           <div className="category-items grid">
             {data.slice(0, 5).map((category) => (
               <Link to={`category/${category.id}`} key={category.id}>
-                <div className="category-item">
+                <div className="category-item1">
+                  <div className="category-item-img1">
+                    <img src={category.image} alt={category.name} />
+                  </div>
+                  <div className="category-item-name1 text-center">
+                    <h6 className="fs-20">{category.name}</h6>
+                  </div>
+                </div>
+               {/*  <div className="category-item">
                   <div className="category-item-img">
                     <img src={category.image} alt="" />
                   </div>
                   <div className="category-item-name text-center">
                     <h6 className="fs-20">{category.name}</h6>
                   </div>
-                </div>
+                </div> */}
               </Link>
             ))}
           </div>

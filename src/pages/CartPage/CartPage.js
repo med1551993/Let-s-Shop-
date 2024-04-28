@@ -34,7 +34,8 @@ const CartPage = () => {
               <Link to="/">
                 <i className="fas fa-home"></i>
                 <span className="breadcrumb-separator">
-                  <i className="fas fa-chevron-right"></i>
+                  {/* <i className="fas fa-chevron-right"></i> */}
+                  |
                 </span>
               </Link>
             </li>

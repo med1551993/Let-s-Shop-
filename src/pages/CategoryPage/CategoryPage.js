@@ -24,14 +24,16 @@ const CategoryPage = () => {
               <Link to="/">
                 <i className="fas fa-home"></i>
                 <span className="breadcrumb-separator">
-                  <i className="fas fa-chevron-right"></i>
+                 {/*  <i className="fas fa-chevron-right"></i> */}
+                  |
                 </span>
               </Link>
             </li>
             <li>
               Category
               <span className="breadcrumb-separator">
-                <i className="fas fa-chevron-right"></i>
+               {/*  <i className="fas fa-chevron-right"></i> */}
+               |
               </span>
             </li>
             <li>{products[0] && products[0].category.name}</li>

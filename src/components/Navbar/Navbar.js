@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../../store/categorySlice";
 import { getCartTotal } from "../../store/cartSlice";
+import { formatPrice } from "../../utils/helpers";
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const categories = useSelector((store) => store.category.data);
   const [isSidebarOpen, setIssidebarOpen] = useState(false);
-  const { totalItems } = useSelector((store) => store.cart);
+  const { totalItems,totalAmount,deliveryCharge } = useSelector((store) => store.cart);
 
   useEffect(() => {
     dispatch(fetchCategories());
@@ -17,12 +18,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="navbar">
+    <nav className="navbar bg-regal-blue">
       <div className="navbar-content">
         <div className="container">
           <div className="navbar-top flex flex-between">
             <Link to="/" className="navbar-brand">
-              <span className="text-regal-blue">Let's </span>
+              <span className="text-white">Let's </span>
               <span className="text-gold">SHOP</span>
             </Link>
 
@@ -35,18 +36,24 @@ const Navbar = () => {
 
             <div className="navbar-btns">
               <Link to="/cart" className="add-to-cart-btn flex">
-                <span className="btn-ico">
-                  <i className="fas fa-shopping-cart"></i>
-                </span>
-                <div className="btn-txt fw-5">
-                  Cart <span className="cart-count-value">{totalItems}</span>
+              <div className="btn-txt fw-2">
+                {formatPrice(totalAmount)}
                 </div>
+                <span className="btn-ico btn-txt fw-5">
+                  <i className="fas fa-shopping-cart"></i>
+                  <span className="cart-count-value">{totalItems}</span>
+                </span>
+               {/*  <div className="btn-txt fw-5">
+                  Cart
+                </div> */}
+               
+
               </Link>
             </div>
           </div>
         </div>
 
-        <div className="navbar-bottom bg-regal-blue">
+        <div className="navbar-bottom ">
           <div className="container flex flex-start">
             <ul
               className={`nav-links flex ${

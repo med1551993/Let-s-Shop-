@@ -4,10 +4,12 @@
 $clr-black: #000;
 $clr-white: #fff;
 /*$clr-regal-blue: #103755;*/
-$clr-regal-blue: #145c9e;
+/* $clr-regal-blue: #145c9e; */
+$clr-regal-blue: #08828F;
 
 /*$clr-gold: #eeb808;*/
-$clr-gold: #bb0a21;
+/*  $clr-gold: #bb0a21;  */
+ $clr-gold: #CE1E26; 
 
 $clr-light-blue: #707b8e;
 $clr-pine-green: #63766b;
@@ -280,6 +282,10 @@ select {
 .mx-auto {
   margin-right: auto;
   margin-left: auto;
+}
+.py-1{
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .py-5 {
   padding-top: 50px;

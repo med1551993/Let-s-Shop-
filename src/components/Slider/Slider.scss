@@ -1,5 +1,6 @@
 @import "../../App.scss";
 .hero-slider {
+  overflow: hidden;
   &-item {
     height: 280px;
     img {

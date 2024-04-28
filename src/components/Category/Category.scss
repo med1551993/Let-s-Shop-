@@ -17,6 +17,22 @@
     }
   }
 
+  .category-item {
+    &-img1 {
+      border-radius: 100%;
+      overflow: hidden;
+      height: 240px;
+      mix-blend-mode:darken;
+      @media screen and (max-width: 1200px) {
+        height: auto;
+      }
+    }
+
+    &-name1 {
+      padding: 12px 0;
+    }
+  }
+
   @media screen and (min-width: 576px) {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
