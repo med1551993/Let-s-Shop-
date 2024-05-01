@@ -59,6 +59,17 @@ export const fetchCategories = () => {
   };
 };
 
+/* export const randomArray = (myArray) => {
+  let newArray =[]
+ for(var i=0; i<10;i++){
+  let randomIndex = Math.random() * myArray.length();  
+  let randomElement = myArray[randomIndex]; 
+  newArray[i] =randomElement
+ }
+ console.log("newArray",newArray)
+ return newArray
+}; */
+
 export const fetchProductsByCategory = (categoryID, dataType) => {
   return async function fetchCategoryProductThunk(dispatch) {
     if (dataType === "all") dispatch(setCategoriesStatusAll(STATUS.LOADING));
@@ -72,7 +83,10 @@ export const fetchProductsByCategory = (categoryID, dataType) => {
       const data = await response.json();
       if (dataType === "all") {
         dispatch(setCategoriesProductAll(data.slice(0, 10)));
+     /*    dispatch(setCategoriesProductAll(randomArray(data))); */
+       
         dispatch(setCategoriesStatusAll(STATUS.IDLE));
+        console.log("data",data)
       }
       if (dataType === "single") {
         dispatch(setCategoriesProductSingle(data.slice(0, 20)));

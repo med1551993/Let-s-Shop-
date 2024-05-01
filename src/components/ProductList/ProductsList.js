@@ -45,9 +45,9 @@ const ProductsList = ({ products, productStatus }) => {
                 </div>
                 <div className="product-item-body">
                   <h6 className="product-item-title text-pine-green fw-4 fs-15">
-                    {product.title.length <= 23
+                    {product.title.length <= 20
                       ? product.title
-                      : product.title.slice(0, 23) + "..."}
+                      : product.title.slice(0, 20) + "..."}
                   </h6>
                   <div className="product-item-price text-regal-blue fw-7 fs-18">
                     {formatPrice(product.price)}
